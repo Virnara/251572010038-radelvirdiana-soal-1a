@@ -1,0 +1,18 @@
+services:
+  web:
+    build:
+      context: .
+      args:
+        # Data personalisasi yang akan dikirim ke Dockerfile saat build
+        NAMA: "Radel Virdiana"
+        NIM: "251572010038"
+        PRODI: "Sistem Informasi"
+        KAMPUS: "STMIK Tazkia"
+        MINAT: "Cloud Computing dan DevOps"
+        ALASAN: "Teknologi adalah kunci perubahan dunia. Saya ingin menjadi bagian dari inovasi yang memberikan dampak nyata bagi masyarakat."
+        CITA: "Menjadi profesional teknologi yang handal dan terus berkembang mengikuti kebutuhan industri digital masa depan."
+    # Mapping port [port-host]:[port-container]
+    ports:
+      - "8520:80"
+    container_name: web-profil-radel
+    restart: unless-stopped
